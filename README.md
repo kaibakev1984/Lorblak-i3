@@ -252,8 +252,7 @@ Ingresar por terminal lo siguiente:
 
 ![cute scheme](/screenshots/cute_scheme.png)
 
-![tell me the truth scheme](/screenshots/tell-me-the-truth_scheme.png
-)
+![tellmethetruth scheme](/screenshots/tellmethetruth-scheme.png)
 
 ![flamie scheme](/screenshots/flamie_scheme.png)
 	
