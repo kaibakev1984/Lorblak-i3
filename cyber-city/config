@@ -36,7 +36,7 @@ bindsym $mod+Return exec st
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+# bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -167,24 +167,39 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-set $bg-color 	          #0E090D
-set $inactive-bg-color    #031420
-set $urgent-bg-color      #BE6E8C
-set $text-color		  #0E090D
-set $inactive-text-color  #216C9F
-set $urgent-text-color	  #050B12
-set $border-color	  #EE9432
-set $inactive-border-color #9C2611
-set $indicator-color       #719375
+set $bg-color 	             #0E090D
+set $border-color	           #EE9432 
+set $text-color		           #0E090D
+
+# i3 titles colors
+set $focused-bg-color        #D96228
+set $focused-border-color    #D96228
+set $focused-text-color      #e8d0a0
+
+set $unfocused-bg-color      #0E090D
+set $unfocused-border-color  #0E090D
+set $unfocused-text-color    #e8d0a0
+
+set $inactive-bg-color       #0E090D
+set $inactive-border-color   #0E090D
+set $inactive-text-color     #216C9F
+
+set $urgent-bg-color         #BE6E8C
+set $urgent-border-color     #9C2611
+set $urgent-text-color	     #050B12
+
+set $indicator-color         #156D8B
+
 # window colors
-#			border              background         text                 indicator
-client.focused		$border-color       $border-color     $text-color          $urgent-bg-color
-client.unfocused        $inactive-border-color       $inactive-border-color      $inactive-bg-color   $urgent-bg-color
-client.focused_inactive $border-color 	    $border-color      $inactive-text-color $urgent-bg-color
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color
+#			                    border                    background                text                    indicator
+client.focused		        $focused-border-color     $focused-bg-color         $focused-text-color     $indicator-color
+client.unfocused          $unfocused-border-color   $unfocused-bg-color       $unfocused-text-color   $indicator-color
+client.focused_inactive   $inactive-border-color 	  $inactive-bg-color        $inactive-text-color    $indicator-color
+client.urgent             $urgent-border-color      $urgent-bg-color          $urgent-text-color      $indicator-color
 
 #  Autostart
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always xrandr -s 1360x768
 
 #  set Transparency
 exec_always compton
@@ -195,8 +210,8 @@ exec_always --no-startup-id exec bash $HOME/.fehbg
 for_window [class="^.*"] border pixel 1
 
 # Personal keybindings
-bindsym $mod+g exec geany
 bindsym $mod+Shift+Return exec firefox
+bindsym $mod+d exec rofi -show run -theme cyber-city
 
 #	Alsa Controls
 bindsym XF86AudioRaiseVolume exec amixer -q sset Master 5%+ unmute
