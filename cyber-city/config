@@ -133,6 +133,12 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# Assign Workspace
+assign [title="st-256color"] $workspace1
+assign [title="Firefox-esr"] $workspace2
+assign [title="Geany"] $workspace3
+assign [title="TelegramDesktop"] $workspace4
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
