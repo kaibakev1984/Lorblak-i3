@@ -281,3 +281,5 @@ Ingresar por terminal lo siguiente:
 ![cyber-city scheme](/screenshots/cyber-city-scheme.png)
 
 ![atletic scheme](/screenshots/atletic-scheme.png)
+
+![globes scheme](/screenshots/globes-scheme.png)
