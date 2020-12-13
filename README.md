@@ -254,7 +254,7 @@ Ingresar por terminal lo siguiente:
 
 ![tellmethetruth scheme](/screenshots/tellmethetruth-scheme.png)
 
-![flamie scheme](/screenshots/flamie_scheme.png)
+![flamie scheme](/screenshots/flamie-scheme.png)
 	
 ![cyber_anime scheme](/screenshots/cyber-anime-scheme.png)
 
