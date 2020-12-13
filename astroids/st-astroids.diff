@@ -1,8 +1,8 @@
 diff --git a/config.def.h b/config.def.h
-index 82b1b09..6065bb6 100644
+index 877afab..6a1699f 100644
 --- a/config.def.h
 +++ b/config.def.h
-@@ -84,31 +84,23 @@ unsigned int tabspaces = 8;
+@@ -84,44 +84,49 @@ static unsigned int tabspaces = 8;
  
  /* Terminal colors (16 first used in escape sequence) */
  static const char *colorname[] = {
@@ -31,38 +31,54 @@ index 82b1b09..6065bb6 100644
 -	/* more colors can be added after 255 to use with DefaultXX */
 -	"#cccccc",
 -	"#555555",
-+	/* solarized dark */
-+	"#eee8d5",  /*  0: black    */
-+	"#6270A7",  /*  1: red      */
-+	"#020221",  /*  2: green    */
-+	"#1c435d",  /*  3: yellow   */
-+	"#0f9faa",  /*  4: blue     */
-+	"#b9bdc0",  /*  5: magenta  */
-+	"#1c435d",  /*  6: cyan     */
-+	"#eee8d5",  /*  7: white    */
-+	"#000f1d",  /*  8: brblack  */
-+	"#1c435d",  /*  9: brred    */
-+	"#b9bdc0",  /* 10: brgreen  */
-+	"#6c5d4d",  /* 11: bryellow */
-+	"#eee8d5",  /* 12: brblue   */
-+	"#1c435d",  /* 13: brmagenta*/
-+	"#f3f4f5",  /* 14: brcyan   */
-+	"#1c435d",  /* 15: brwhite  */
- };
+-};
  
++  /* 8 normal colors */
++  [0] = "#000F1D", /* black   */
++  [1] = "#737B83", /* red     */
++  [2] = "#7C848B", /* green   */
++  [3] = "#899096", /* yellow  */
++  [4] = "#9AA0A6", /* blue    */
++  [5] = "#ACB0B5", /* magenta */
++  [6] = "#B9BDC1", /* cyan    */
++  [7] = "#d5d7d9", /* white   */
++
++  /* 8 bright colors */
++  [8]  = "#959697", /* black   */
++  [9]  = "#737B83", /* red     */
++  [10] = "#7C848B", /* green   */
++  [11] = "#899096", /* yellow  */
++  [12] = "#9AA0A6", /* blue    */
++  [13] = "#ACB0B5", /* magenta */
++  [14] = "#B9BDC1", /* cyan    */
++  [15] = "#d5d7d9", /* white   */
++
++  /* special colors */
++  [256] = "#000F1D", /* background */
++  [257] = "#d5d7d9", /* foreground */
++};
  
-@@ -116,10 +108,10 @@ static const char *colorname[] = {
+ /*
   * Default colors (colorname index)
-  * foreground, background, cursor, reverse cursor
+- * foreground, background, cursor, reverse cursor
++ * foreground, background, cursor
   */
 -unsigned int defaultfg = 7;
 -unsigned int defaultbg = 0;
 -static unsigned int defaultcs = 256;
--static unsigned int defaultrcs = 257;
-+unsigned int defaultfg = 12;
-+unsigned int defaultbg = 8;
-+static unsigned int defaultcs = 14;
-+static unsigned int defaultrcs = 15;
++unsigned int defaultfg = 257;
++unsigned int defaultbg = 256;
++static unsigned int defaultcs = 257;
+ static unsigned int defaultrcs = 257;
  
  /*
++ * Colors used, when the specific fg == defaultfg. So in reverse mode this
++ * will reverse too. Another logic would only make the simple feature too
++ * complex.
++ */
++unsigned int defaultitalic = 7;
++unsigned int defaultunderline = 7;
++/*
   * Default shape of cursor
+  * 2: Block ("█")
+  * 4: Underline ("_")

@@ -246,7 +246,7 @@ Ingresar por terminal lo siguiente:
 **NOTA**: Se debe tener instalado `w3m`.
 
 # Screenshots
-![astroids scheme](/screenshots/astroidsV2.jpg)
+![astroids scheme](/screenshots/astroids-scheme.png)
 
 ![darkemo scheme](/screenshots/darkemo-scheme.png)
 
