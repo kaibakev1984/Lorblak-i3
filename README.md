@@ -258,7 +258,7 @@ Ingresar por terminal lo siguiente:
 	
 ![cyber_anime scheme](/screenshots/cyber-anime-scheme.png)
 
-![bigcity scheme](/screenshots/bigcity_scheme.png)	
+![bigcity scheme](/screenshots/bigcity-scheme.png)	
 	
 ![techo_red scheme](/screenshots/techno_red_scheme.png)	
 
