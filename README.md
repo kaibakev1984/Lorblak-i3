@@ -260,8 +260,6 @@ Ingresar por terminal lo siguiente:
 
 ![bigcity scheme](/screenshots/bigcity-scheme.png)	
 	
-![techo_red scheme](/screenshots/techno_red_scheme.png)	
-
 ![cybergirl scheme](/screenshots/cybergirl-scheme.png)
 
 ![solarized scheme](/screenshots/solarized-scheme.png)
