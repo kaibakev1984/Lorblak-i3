@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:unifont 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -104,16 +104,12 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
-set $workspace1 "1"
-set $workspace2 "2"
-set $workspace3 "3"
-set $workspace4 "4"
 
 # switch to workspace
-bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 workspace $workspace2
-bindsym $mod+3 workspace $workspace3
-bindsym $mod+4 workspace $workspace4
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
@@ -122,10 +118,10 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $workspace1
-bindsym $mod+Shift+2 move container to workspace $workspace2
-bindsym $mod+Shift+3 move container to workspace $workspace3
-bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
@@ -134,10 +130,10 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Assign Workspace
-assign [title="st-256color"] $workspace1
-assign [title="Firefox-esr"] $workspace2
-assign [title="Geany"] $workspace3
-assign [title="TelegramDesktop"] $workspace4
+assign [title="st-256color"] $ws1
+assign [title="Firefox-esr"] $ws2
+assign [title="Geany"] $ws3
+assign [title="TelegramDesktop"] $ws4
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -180,14 +176,14 @@ set $text-color		           #0E090D
 # i3 titles colors
 set $focused-bg-color        #D96228
 set $focused-border-color    #D96228
-set $focused-text-color      #e8d0a0
+set $focused-text-color      #f2e097
 
-set $unfocused-bg-color      #0E090D
-set $unfocused-border-color  #0E090D
-set $unfocused-text-color    #e8d0a0
+set $unfocused-bg-color      #5A5B63
+set $unfocused-border-color  #0A0E13
+set $unfocused-text-color    #f2e097
 
-set $inactive-bg-color       #0E090D
-set $inactive-border-color   #0E090D
+set $inactive-bg-color       #5A5B63
+set $inactive-border-color   #0A0E13
 set $inactive-text-color     #216C9F
 
 set $urgent-bg-color         #BE6E8C
