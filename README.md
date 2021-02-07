@@ -1,7 +1,4 @@
-# Lorblak-Dotfiles
-
-Con gusto, presento mis dotfiles, para todos aquellos que vieron mis capturas en `Linux Latinoamérica` y `XUnix`. La mayor parte del trabajo se hizo en AntiX, y estas configuraciones pretenden ser aplicables de distribuciones Debian y derivados.
-
+![Lorblak i3wm](/logo-i3wm.png) <br />
 Prerrequisitos
 ==============
 Deben tener instalado lo siguiente:
