@@ -1,4 +1,7 @@
-![Lorblak i3wm](/logo-i3wm.png) <br />
+<div align="center">
+	<img src="/logo-i3wm.png" alt="Logo Lorblak i3wm">
+</div>
+
 Prerrequisitos
 ==============
 Deben tener instalado lo siguiente:
