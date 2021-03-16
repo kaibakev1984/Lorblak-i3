@@ -1,4 +1,5 @@
 ![Lorblak i3wm](/logo-i3wm.png) <br />
+
 Prerrequisitos
 ==============
 Deben tener instalado lo siguiente:
@@ -244,37 +245,21 @@ Ingresar por terminal lo siguiente:
 
 # Screenshots
 ![astroids scheme](/screenshots/astroids-scheme.png)
-
 ![darkemo scheme](/screenshots/darkemo-scheme.png)
-
 ![cute scheme](/screenshots/cute_scheme.png)
-
 ![tellmethetruth scheme](/screenshots/tellmethetruth-scheme.png)
-
 ![flamie scheme](/screenshots/flamie-scheme.png)
-	
 ![cyber_anime scheme](/screenshots/cyber-anime-scheme.png)
-
 ![bigcity scheme](/screenshots/bigcity-scheme.png)	
-	
 ![cybergirl scheme](/screenshots/cybergirl-scheme.png)
-
 ![solarized scheme](/screenshots/solarized-scheme.png)
-
 ![x-wing scheme](/screenshots/x-wing_scheme.png)
-
 ![joker scheme](/screenshots/joker-scheme.png)
-
 ![synthwave scheme](/screenshots/synthwave-scheme.png)
-
 ![rain scheme](/screenshots/rain-scheme.png)
-
 ![sky scheme](/screenshots/sky-scheme.png)
-
 ![punk-city scheme](/screenshots/punk-city-scheme.png)
-
 ![cyber-city scheme](/screenshots/cyber-city-scheme.png)
-
 ![atletic scheme](/screenshots/atletic-scheme.png)
-
 ![globes scheme](/screenshots/globes-scheme.png)
+![arch scheme](https://i.imgur.com/onJ62p7.png)
