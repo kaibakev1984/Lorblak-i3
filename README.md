@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 ![Lorblak i3wm](/logo-i3wm.png) <br />
+=======
+<div align="center">
+	<img src="/logo-i3wm.png" alt="Logo Lorblak i3wm">
+</div>
+>>>>>>> 14f769576903b35d931f9257656410020f693c9c
 
 Prerrequisitos
 ==============
