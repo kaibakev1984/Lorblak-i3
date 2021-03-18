@@ -18,16 +18,23 @@
 
 [colors]
 background           = #061E28
-background-alt       = #6C6044
-foreground           = #bdaf97
-foreground-alt       = #962F4A
-primary              = #ED5C60
-secondary            = #BB51AE
-alert                = #EA142E
+background-alt       = #b58900
+foreground           = #eee8d5
+foreground-alt       = #7c7c74
+primary              = #5D9094
+secondary            = #6F6F6F
+alert                = #FF0000
+
+arrow1               = #6C6044
+arrow2               = #2B6963
+arrow3               = #213F41
+arrow4               = #0c0c27
+arrow5               = #9D9D9D
+arrow6               = #C9A7A6
 
 [bar/example]
 width = 100%
-height = 20
+height = 22
 ;offset-x = 10%
 ;offset-y = 1%
 radius = 0.0
@@ -37,24 +44,28 @@ bottom = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 2.5
+line-size = 0
 line-color = ${colors.background-alt}
 
-border-size = 4
+border-size = 0
 border-color = ${colors.background}
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left  = 0
+module-margin-right = 0
 
-font-0 = Iosevka Nerd Font:style=Medium:size=8;2
-font-1 = "Wuncon Siji:size=10;1"
+font-0 = Iosevka Nerd Font:style=Medium:size=8;1
+font-1 = feather:style=Medium:size=12;3
+font-2 = Iosevka Nerd Font:style=Medium:size=19;5
+font-3 = Iosevka Nerd Font:style=Medium:size=12;4
+font-4 = Iosevka Nerd Font:style=Medium:size=7;4
 
-modules-left    = username hostname xwindow
-modules-center  = i3
-modules-right   = alsa wlan eth xkeyboard date battery
+
+modules-left    = bspwm i3
+modules-center  = 
+modules-right   = arrow1-right wlan eth arrow2-right memory cpu arrow3-right info-kernel alsa arrow4-right date xkeyboard battery 
 
 ;tray-position = none
 ;tray-detached = false
@@ -79,18 +90,19 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
-format-foreground = ${colors.background-alt}
+label = %title:0:40:...%
+format-foreground = ${colors.foreground-alt}
 format-padding = 4
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
-
+;;blacklist-1 = caps lock
+format-foreground        = ${colors.foreground}
+format-background        = ${colors.arrow4}
+format-padding = 1
 format-prefix =   
-format-prefix-foreground = ${colors.foreground-alt}
 label-layout = " %layout%"
-label-layout-foreground = ${colors.foreground-alt}
 
 label-indicator-background = ${colors.alert}
 label-indicator-padding = 2
@@ -102,8 +114,8 @@ interval = 25
 mount-0 = /
 
 format-mounted = <label-mounted>
-format-mounted-foreground = ${colors.foreground-alt}
 format-mounted-prefix = 
+format-mounted-prefix-foreground = ${colors.background-alt}
 label-mounted =  " %free%"
 
 format-unmounted = <label-unmounted>
@@ -115,17 +127,19 @@ type = internal/bspwm
 
 ; Only show workpsaces on the same output as the bar
 ; pin-workspaces=true
-ws-icon-0 = I;1
-ws-icon-1 = II;2
-ws-icon-2 = III;3
-ws-icon-3 = IV;4
+ws-icon-0 = I;
+ws-icon-1 = II;
+ws-icon-2 = III;
+ws-icon-3 = IV;
+ws-icon-4 = V;
 ws-icon-default = 
 
 format = <label-state> <label-mode>
 
 label-focused = %icon%
-label-focused-underline = ${colors.background-alt}
-label-focused-padding = 2
+label-focused-foreground = ${colors.background-alt}
+label-focused-underline  = ${colors.background-alt}
+label-focused-padding    = 2
 
 label-occupied = %icon%
 label-occupied-padding = 2
@@ -135,7 +149,7 @@ label-urgent-background = ${colors.alert}
 label-urgent-padding = 2
 
 label-empty = %icon%
-label-empty-foreground = ${colors.foreground}
+label-empty-foreground = ${colors.secondary}
 label-empty-padding = 2
 
 ; Separator in between workspaces
@@ -162,58 +176,66 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
 label-focused-background = ${colors.background}
-label-focused-foreground = ${colors.foreground-alt}
+label-focused-foreground = ${colors.background-alt}
 label-focused-underline= ${colors.foreground-alt}
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %icon%
+label-unfocused-foreground = ${colors.foreground-alt}
 label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %icon%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %icon%
 label-urgent-background = ${colors.alert}
+label-urgent-foreground = ${colors.foreground}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = |
 
+
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = " "
-format-prefix-foreground = ${colors.foreground}
-label = %percentage:2%%
+format-background = ${colors.arrow2}
+format-padding = 2
+label = %percentage:3%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${root.foreground}
-label = %percentage_used%%
+format-background = ${colors.arrow2}
+format-padding = 1
+format-prefix = ﬙
+label = " %percentage_used:3%%"
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = wlan0
 interval = 1.0
 accumulate-stats = true
 unknown-as-up = true
 
 format-connected                      = <label-connected>
-format-connected-foreground           = ${colors.foreground-alt}
+format-connected-foreground           = ${colors.foreground}
+format-connected-background           = ${colors.arrow1}
 format-connected-prefix               = 直
+format-connected-padding              = 1
 
 format-disconnected                   = <label-disconnected>
-format-disconnected-foreground        = ${colors.foreground-alt}
+format-disconnected-foreground        = ${colors.foreground}
+format-disconnected-background        = ${colors.arrow1}
 format-disconnected-prefix            = 睊
+format-disconnected-padding           = 1
 
-label-connected = %essid%
+label-connected = " %essid%: %upspeed:9%   %downspeed:9% "
+;;label-connected = " %essid%"
 label-disconnected = Not connected
 
 
@@ -223,9 +245,14 @@ interface = enp0s3
 interval = 3.0
 
 format-connected = <label-connected>
-format-connected-prefix = 
-format-connected-foreground = ${colors.foreground-alt}
-label-connected = " %ifname%"
+;;format-connected-prefix =  
+format-connected-prefix = 
+format-connected-foreground = ${colors.foreground}
+format-connected-background = ${colors.arrow1}
+format-connected-padding    = 2
+;;format-connected-underline  = ${colors.background}
+label-connected = " %ifname%: %upspeed:9%   %downspeed:9% "
+;;label-connected = " %ifname%"
 
 ;format-disconnected = 
 format-disconnected =
@@ -235,29 +262,40 @@ label-disconnected = Not connected
 type = internal/date
 interval = 5
 
-format-foreground = ${colors.foreground-alt}
-time = "%a %b %d, %I:%M %p "
-time-alt  = %H:%M
-format-prefix =  
+;time = " %a %b %d, %I:%M %p "
+time = " %I:%M %p "
+time-alt  = " %d-%m-%Y"
+
+format-foreground = ${colors.foreground}
+format-background = ${colors.arrow4}
+;;format-underline  = ${colors.background}
+format-padding    = 1
+
+format-prefix =   
 label = " %time%"
 
 [module/alsa]
 type = internal/alsa
 
-format-volume = <ramp-volume> <label-volume>
-format-volume-foreground = ${colors.foreground-alt}
-label-volume = %percentage%%
-label-volume-foreground = ${colors.foreground-alt}
+format-volume            = <ramp-volume> <label-volume>
+format-volume-foreground = ${colors.foreground}
+format-volume-background = ${colors.arrow3}
+;;format-volume-underline  = ${colors.background}
+format-volume-padding    = 2
 
+label-volume = %percentage%%
+label-volume-foreground = ${colors.foreground}
+
+format-muted-background = ${colors.arrow3}
 format-muted-prefix = ﱝ
+format-muted-padding = 2
 label-muted = " Muted"
-label-muted-foreground = ${colors.foreground}
 
 ramp-volume-0 = 婢
 ramp-volume-1 = 奄
 ramp-volume-2 = 奔
 ramp-volume-3 = 墳
-ramp-volume-foreground = ${colors.foreground-alt}
+ramp-volume-foreground = ${colors.foreground}
 
 ; Only applies if <bar-volume> is used
 bar-volume-width = 10
@@ -297,18 +335,29 @@ poll-interval = 2
 time-format = %H:%M
 
 format-charging      = <animation-charging> <label-charging>
-format-charging-foreground = ${colors.primary}
+format-charging-foreground = ${colors.foreground}
+format-charging-background = ${colors.arrow4}
+;format-charging-underline  = ${colors.background}
+format-charging-padding     = 2
+
 format-discharging   = <ramp-capacity> <label-discharging>
-format-discharging-foreground = ${colors.foreground-alt}
+format-discharging-foreground = ${colors.foreground}
+format-discharging-background = ${colors.arrow4}
+;format-discharging-underline  = ${colors.background}
+format-discharging-padding    = 2
+
+format-full                   = <ramp-capacity> <label-full>
+format-full-foreground = ${colors.foreground}
+format-full-background = ${colors.arrow4}
+;format-discharging-underline  = ${colors.background}
+format-full-padding    = 2
 
 label-charging    = " %percentage%%"
-label-charging-foreground = ${colors.primary}
 label-discharging = " %percentage%%"
-label-discharging-foreground = ${colors.foreground-alt}
 
-label-full = 
+label-full = " %percentage%%" 
 
-ramp-capacity-0 =  
+ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
@@ -318,7 +367,6 @@ ramp-capacity-6 = 
 ramp-capacity-7 = 
 ramp-capacity-8 = 
 ramp-capacity-9 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 
 animation-charging-1 = 
@@ -327,7 +375,6 @@ animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-5 = 
 animation-charging-6 = 
-animation-charging-foreground = ${colors.primary}
 
 animation-charging-framerate = 750
 
@@ -349,16 +396,119 @@ margin-bottom = 0
 type = custom/script
 interval = 256
 format = "<label>"
-format-foreground = ${colors.foreground-alt}
+format-foreground = ${colors.foreground}
+format-background = ${colors.arrow2}
+format-underline  = ${colors.background}
 format-prefix = " "
-format-padding = 0
+format-padding = 2
 exec = echo "$(uname -n)"
+format-prefix-font = 2
+
+[module/updates]
+type = custom/script
+exec = apt-get upgrade -s | grep -i security
+format-foreground = ${colors.secondary}
+interval = 1000
+bel = %output:0:30:...%
 
 [module/username]
 type = custom/script
 interval = 256
 format = "<label>"
-format-foreground = ${colors.foreground-alt}
+format-foreground = ${colors.foreground}
+format-background= ${colors.arrow1}
+format-underline = ${colors.background}
 format-prefix = " "
 format-padding = 2
 exec = echo "$(whoami)"
+format-prefix-font = 2
+
+[module/info-kernel]
+type = custom/script
+interval = 1024
+exec = uname -r
+format = "<label>"
+format-prefix = " "
+format-background = ${colors.arrow3}
+format-padding = 2
+
+
+[module/arrow1-right]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground  = ${colors.arrow1}
+;;content-underline   = ${colors.background}
+content-padding = 0
+
+[module/arrow2-right]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground  = ${colors.arrow2}
+content-background  = ${colors.arrow1}
+;;content-underline   = ${colors.background}
+content-padding = 0
+
+[module/arrow3-right]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground  = ${colors.arrow3}
+content-background  = ${colors.arrow2}
+;;content-underline   = ${colors.background}
+content-padding = 0
+
+[module/arrow4-right]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground  = ${colors.arrow4}
+content-background  = ${colors.arrow3}
+;;content-underline   = ${colors.background}
+content-padding = 0
+
+[module/arrow5-right]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground  = ${colors.background}
+content-background  = ${colors.arrow4}
+content-underline   = ${colors.background}
+content-padding = 0
+
+[module/arrow6-right]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground  = ${colors.arrow6}
+content-background  = ${colors.arrow5}
+content-underline   = ${colors.background}
+content-padding = 0
+
+
+[module/arrow1-left]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground  = ${colors.background}
+content-background  = ${colors.arrow1}
+content-underline   = ${colors.background}
+content-padding = 0
+
+[module/arrow2-left]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground  = ${colors.arrow1}
+content-background  = ${colors.arrow2}
+content-underline   = ${colors.background}
+content-padding = 0
+
+[module/arrow3-left]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground  = ${colors.arrow2}
+content-background  = ${colors.arrow3}
+content-underline   = ${colors.background}
+content-padding = 0
+
+[module/arrow4-left]
+type = custom/text
+content = "%{T3}%{T-}"
+content-foreground  = ${colors.arrow3}
+content-background  = ${colors.background}
+content-underline   = ${colors.background}
+content-padding = 0

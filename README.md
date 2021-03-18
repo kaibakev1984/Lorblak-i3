@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-![Lorblak i3wm](/logo-i3wm.png) <br />
-=======
 <div align="center">
 	<img src="/logo-i3wm.png" alt="Logo Lorblak i3wm">
 </div>
->>>>>>> 14f769576903b35d931f9257656410020f693c9c
 
 Prerrequisitos
 ==============
@@ -258,7 +254,7 @@ Ingresar por terminal lo siguiente:
 ![cyber_anime scheme](/screenshots/cyber-anime-scheme.png)
 ![bigcity scheme](/screenshots/bigcity-scheme.png)	
 ![cybergirl scheme](/screenshots/cybergirl-scheme.png)
-![solarized scheme](/screenshots/solarized-scheme.png)
+![solarized scheme](https://i.imgur.com/xlqXskF.png)
 ![x-wing scheme](/screenshots/x-wing_scheme.png)
 ![joker scheme](/screenshots/joker-scheme.png)
 ![synthwave scheme](/screenshots/synthwave-scheme.png)
