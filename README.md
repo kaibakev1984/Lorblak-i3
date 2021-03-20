@@ -249,7 +249,7 @@ Ingresar por terminal lo siguiente:
 ![astroids scheme](/screenshots/astroids-scheme.png)
 ![darkemo scheme](/screenshots/darkemo-scheme.png)
 ![cute scheme](/screenshots/cute_scheme.png)
-![tellmethetruth scheme](/screenshots/tellmethetruth-scheme.png)
+![tellmethetruth scheme](https://i.imgur.com/EfWwGkq.png)
 ![flamie scheme](/screenshots/flamie-scheme.png)
 ![cyber_anime scheme](/screenshots/cyber-anime-scheme.png)
 ![bigcity scheme](/screenshots/bigcity-scheme.png)	
