@@ -251,7 +251,7 @@ Ingresar por terminal lo siguiente:
 ![cute scheme](/screenshots/cute_scheme.png)
 ![tellmethetruth scheme](https://i.imgur.com/EfWwGkq.png)
 ![flamie scheme](/screenshots/flamie-scheme.png)
-![cyber_anime scheme](/screenshots/cyber-anime-scheme.png)
+![cyber_anime scheme](https://i.imgur.com/ODR5TTf.png)
 ![bigcity scheme](/screenshots/bigcity-scheme.png)	
 ![cybergirl scheme](/screenshots/cybergirl-scheme.png)
 ![solarized scheme](https://i.imgur.com/xlqXskF.png)
