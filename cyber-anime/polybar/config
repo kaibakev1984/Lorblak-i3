@@ -56,13 +56,6 @@ padding-right = 0
 module-margin-left  = 0
 module-margin-right = 0
 
-;; font-0 = Iosevka Nerd Font:style=Medium:size=8;1
-;; font-1 = feather:style=Medium:size=12;3
-;; font-2 = Iosevka Nerd Font:style=Medium:size=19;5
-;; font-3 = Iosevka Nerd Font:style=Medium:size=12;4
-;; font-4 = Iosevka Nerd Font:style=Medium:size=7;4
-
-
 font-0 = Inconsolata Nerd Font:style=Medium:size=8;1
 ;;font-1 = feather:style=Medium:size=12;3
 font-1 = Inconsolata Nerd Font:style=Medium:size=19;5
