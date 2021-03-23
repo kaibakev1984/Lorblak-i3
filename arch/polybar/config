@@ -154,7 +154,7 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %icon%
 label-focused-background = ${colors.background}
-label-focused-foreground = ${colors.foreground-alt}
+label-focused-foreground = ${colors.background-alt}
 label-focused-underline= ${colors.foreground-alt}
 label-focused-padding = 2
 
@@ -211,16 +211,16 @@ label-disconnected = Not connected
 
 [module/eth]
 type = internal/network
-interface = enp0s3
+interface = enp2s6
 interval = 3.0
 
 format-connected = <label-connected>
 format-connected-foreground = ${colors.foreground-alt}
-format-connected-prefix = 
-label-connected = " %ifname%"
+format-connected-prefix = 泌
+label-connected = " %local_ip%"
 
-;format-disconnected = 
 format-disconnected =
+format-disconnected-foreground = ${colors.alert}
 label-disconnected = Not connected
 
 [module/date]
