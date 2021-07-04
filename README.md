@@ -265,3 +265,4 @@ Ingresar por terminal lo siguiente:
 ![atletic scheme](/screenshots/atletic-scheme.png)
 ![globes scheme](/screenshots/globes-scheme.png)
 ![arch scheme](https://i.imgur.com/onJ62p7.png)
+![snorlax theme](https://i.imgur.com/e8NZ4BY.png)
